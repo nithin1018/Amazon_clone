@@ -26,27 +26,27 @@ const products = [{
 
 let productsHTML = '' ;
 
-products.forEach((products) =>{
+products.forEach((product) =>{
     productsHTML +=` <div class="product-container">
           <div class="product-image-container">
             <img class="product-image"
-              src="${products.img}">
+              src="${product.img}">
           </div>
 
           <div class="product-name limit-text-to-2-lines">
-           ${products.name}
+           ${product.name}
           </div>
 
           <div class="product-rating-container">
             <img class="product-rating-stars"
-              src="images/ratings/rating-${products.rating.stars * 10}.png">
+              src="images/ratings/rating-${product.rating.stars * 10}.png">
             <div class="product-rating-count link-primary">
-              ${products.rating.count}
+              ${product.rating.count}
             </div>
           </div>
 
           <div class="product-price">
-            $${(products.priceCents / 100).toFixed(2)}
+            $${(product.priceCents / 100).toFixed(2)}
           </div>
 
           <div class="product-quantity-container">
